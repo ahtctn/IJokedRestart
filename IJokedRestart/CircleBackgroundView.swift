@@ -38,10 +38,10 @@ struct CircleBackgroundView: View {
     
     var body: some View {
         ZStack {
-            Color.mint
+            Color.black.opacity(0.8)
                 .opacity(isShowinBackground ? 1 : 0)
             Circle()
-                .fill(RadialGradient(colors: [Color("#0F678D").opacity(0.5), .clear],
+                .fill(RadialGradient(colors: [.blue.opacity(0.5), .clear],
                                      center: .center,
                                      startRadius: 0, endRadius: 170))
                 .animation(.linear(duration: 1), value: circleCounter)
@@ -64,7 +64,7 @@ extension CircleBackgroundView {
         ZStack {
             Color.mint
             Circle()
-                .fill(RadialGradient(colors: [Color("#0F678D").opacity(0.5), .clear],
+                .fill(RadialGradient(colors: [.blue.opacity(0.5), .clear],
                                      center: .center,
                                      startRadius: 0, endRadius: 170))
                 .animation(.linear(duration: 1), value: circleCounter)
